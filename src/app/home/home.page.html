@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-title>Mi ubicacion</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-no-padding">
+      <ion-button (click)="getCurrentCoordinates()" expand = "block">
+          Obtener ubicacion
+      </ion-button>
+      <ion-list>
+          <ion-list-header>
+              Coordenandas de la ubicación
+          </ion-list-header>
+          <ion-item>
+              <ion-label>Latitude</ion-label>
+              <ion-badge color="danger" slot="end">{{latitude}}</ion-badge>
+          </ion-item>
+          <ion-item>
+              <ion-label>Longitud</ion-label>
+              <ion-badge color="danger" slot="end">{{longitude}}</ion-badge>
+          </ion-item>
+      </ion-list>
+      <ion-button (click)="openGoogleMaps()" expand="block">
+        Abrir en Google Maps
+    </ion-button>
+  </div>
+</ion-content>
